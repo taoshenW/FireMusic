@@ -28,7 +28,7 @@ com.sfp.web放controller
 =====
 类名首字母大写ThisIsAnExample
 ------
-变量名首字母小写thisIsAnExample
+变量名同函数名首字母小写thisIsAnExample
 ------
 html文件位于src/mian/java/resources/templates
 ------

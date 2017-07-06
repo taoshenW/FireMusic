@@ -24,7 +24,15 @@ com.sfp.web放controller
 ###
 8.私信
 
+***命名规范***
+=====
+类名首字母大写ThisIsAnExample
+------
+变量名首字母小写thisIsAnExample
+------
 html文件位于src/mian/java/resources/templates
 ------
 数据库配置位于application.properties
 ------
+
+

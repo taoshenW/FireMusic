@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Music {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String name;
 	private Integer artist;
@@ -19,86 +19,111 @@ public class Music {
 	private Integer count;
 	private Integer language;
 	private Integer type;
-	
+
+	public void setAbsolutePath(String location) {
+		this.path = location + "//" + this.path;
+	}
+
 	/**
 	 * @return the path
 	 */
 	public String getPath() {
 		return path;
 	}
+
 	/**
-	 * @param path the path to set
+	 * @param path
+	 *            the path to set
 	 */
 	public void setPath(String path) {
 		this.path = path;
 	}
+
 	/**
 	 * @return the name
 	 */
 	public String getName() {
 		return name;
 	}
+
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	/**
 	 * @return the artist
 	 */
 	public Integer getArtist() {
 		return artist;
 	}
+
 	/**
-	 * @param artist the artist to set
+	 * @param artist
+	 *            the artist to set
 	 */
 	public void setArtist(Integer artist) {
 		this.artist = artist;
 	}
+
 	/**
 	 * @return the count
 	 */
 	public Integer getCount() {
 		return count;
 	}
+
 	/**
-	 * @param count the count to set
+	 * @param count
+	 *            the count to set
 	 */
 	public void setCount(Integer count) {
 		this.count = count;
 	}
+
 	/**
 	 * @return the language
 	 */
 	public Integer getLanguage() {
 		return language;
 	}
+
 	/**
-	 * @param language the language to set
+	 * @param language
+	 *            the language to set
 	 */
 	public void setLanguage(Integer language) {
 		this.language = language;
 	}
+
 	/**
 	 * @return the type
 	 */
 	public Integer getType() {
 		return type;
 	}
+
 	/**
-	 * @param type the type to set
+	 * @param type
+	 *            the type to set
 	 */
 	public void setType(Integer type) {
 		this.type = type;
 	}
+
 	/**
 	 * @return the id
 	 */
 	public Integer getId() {
 		return id;
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -106,6 +131,5 @@ public class Music {
 		return "Music [id=" + id + ", name=" + name + ", artist=" + artist + ", count=" + count + ", language="
 				+ language + ", type=" + type + "]";
 	}
-	
-	
+
 }

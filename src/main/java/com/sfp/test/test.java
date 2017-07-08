@@ -16,6 +16,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.*;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.sfp.domain.Music;
+import com.sfp.service.MusicService;
 import com.sfp.web.LoginController;
 import com.sfp.web.TestAdminController;
 
@@ -23,17 +25,17 @@ import com.sfp.web.TestAdminController;
 @SpringBootTest
 public class test {
 
-	@Value("${temp.path}")
+	@Value("${music.path}")
 	String path;
 	@Autowired
-	LoginController loginController;
+	MusicService musicService;
 	@Mock
 	HttpSession session;
 
 	@Test
 	public void exampleTest() throws JsonProcessingException {
-		System.out.println(path);
-		//assertEquals(true, loginController.checkLogin("韬神w", "123456",session));
+		File file;
+
 	}
 
 }

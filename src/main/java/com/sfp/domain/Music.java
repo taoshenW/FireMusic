@@ -15,9 +15,23 @@ public class Music {
 	private Integer id;
 	private String name;
 	private Integer artist;
+	private String path;
 	private Integer count;
 	private Integer language;
 	private Integer type;
+	
+	/**
+	 * @return the path
+	 */
+	public String getPath() {
+		return path;
+	}
+	/**
+	 * @param path the path to set
+	 */
+	public void setPath(String path) {
+		this.path = path;
+	}
 	/**
 	 * @return the name
 	 */

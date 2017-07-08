@@ -1,56 +1,23 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
-<head th:replace="header::header">
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Rapha&euml;l</title>
 </head>
 <body>
-	<div th:replace="header::nav"></div>
-	<div class="container-fluid">
-		<div class="row">
-			<div th:replace="menu"></div>
-			<!-- content begin here... -->
-			<div class="col-md-10" id="page">
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>条形码</th>
-							<th>图书名称</th>
-							<th>作者</th>
-							<th>出版社</th>
-							<th>书架</th>
-							<th>库存</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr v-for="book in list">
-							<td>{{book.number}}</td>
-							<td>{{book.title}}</td>
-							<td>{{book.author}}</td>
-							<td>{{book.press}}</td>
-							<td>{{book.bookcase}}</td>
-							<td>{{book.amount}}</td>
-							<td><a :href="'images/'+book.pic" data-lightbox="image-1"
-								:data-title="'封面:'+book.pic">查看封面</a></td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="container" style="margin-right:50px;" id="pager">
-					<div class="row">
-						<div class="col-md-offset-10">
-							<ul class="pagination" v-if="totalPage>1">
-								<li v-bind:class="{disabled:isFirstPage}"
-									v-bind:page="getPrevious"><a @click="updatepage($event)">&laquo;</a></li>
-								<li v-for="i in totalPage" :page="i-1"
-									v-bind:class="[(i-1)==currentPage?'active':'']"><a
-									@click="updatepage($event)">{{i}}</a></li>
-								<li v-bind:class="{disabled:isLastPage}" v-bind:page="getNext"><a
-									@click="updatepage($event)">&raquo;</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<form action="/user/modify" method="post" enctype="multipart/form-data">
+		id<input type="text" name="id" /><br>
+		name<input type="text" name="name" /><br> 
+		acount<input type="text" name="account" /><br> 
+		pass<input type="text"name="password" /><br> 
+		nan<input type="radio" name="sex"
+			value="1" />
+		nv<input type="radio" name="sex" value="0" /><br>
+		age<input type="number" name="age" /><br> 
+		add<input type="text"name="address" /><br> 
+		description<input type="text"name="description" /><br> 
+		img<input type="file" name="icon"/> 
+		<button type="submit">tijiao</button>
+	</form>
 </body>
 </html>

@@ -14,12 +14,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String name;
+	private String account;
 	private String password;
 	private String image;
 	private Integer sex;
 	private Integer age;
+	private String address;
 	//个人介绍
 	private String description;
+	
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	/**
 	 * @return the name
 	 */
@@ -98,13 +107,38 @@ public class User {
 	public Integer getId() {
 		return id;
 	}
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	/**
+	 * @return the account
+	 */
+	public String getAccount() {
+		return account;
+	}
+	/**
+	 * @param account the account to set
+	 */
+	public void setAccount(String account) {
+		this.account = account;
+	}
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + ", image=" + image + ", sex=" + sex
-				+ ", age=" + age + ", description=" + description + "]";
+		return "User [id=" + id + ", name=" + name + ", account=" + account + ", password=" + password + ", image="
+				+ image + ", sex=" + sex + ", age=" + age + ", address=" + address + ", description=" + description
+				+ "]";
 	}
-	
+
 }
